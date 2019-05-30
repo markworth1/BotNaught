@@ -3,8 +3,8 @@ package service
 import (
 	"fmt"
 	"context"
-	"golang-curriculum-c-6/server/pkg/game"
-	"golang-curriculum-c-6/server/pkg/player"
+	"github.com/gSchool/golang-curriculum-c-6/server/pkg/game"
+	"github.com/gSchool/golang-curriculum-c-6/server/pkg/player"
 	"github.com/chehsunliu/poker"
 	"reflect"
 	"testing"

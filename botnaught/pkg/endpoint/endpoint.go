@@ -4,7 +4,7 @@ import (
 	"context"
 	endpoint "github.com/go-kit/kit/endpoint"
 	service "go-poker-project/Botnaught/botnaught/pkg/service"
-	game "golang-curriculum-c-6/server/pkg/game"
+	game "github.com/gSchool/golang-curriculum-c-6/server/pkg/game"
 )
 
 // HealthRequest collects the request parameters for the Health method.
