@@ -117,11 +117,15 @@ func Bet(myCards []poker.Card, myRank int, myChips int, myCommitted int, current
 	logger.Println("Current chips: " + strconv.Itoa(myChips) + " - Committed chips: " + strconv.Itoa(myCommitted))
 
 	if availChips >= 0 { // We have enough chips to bet...
+		flop := len(communityCards) == 3
+		turn := len(communityCards) == 4
+		river := len(communityCards) == 5
 
+		ourHandRocks := false
 		// No Community Cards have been dealt (PRE-FLOP)
 		if len(communityCards) == 0 {
-			// Raise if we have a pair
-			if (myCards[0].String()[0] == myCards[1].String()[0]) {
+			// Raise if we have a Pair, Ace or suited K/Q
+			if checkRaise(myCards) {
 				myBet = int(math.Round(float64(myTotal) * .20))
 			} else {
 				if float32(currentBet) < float32(myTotal) * .60 {
@@ -130,42 +134,65 @@ func Bet(myCards []poker.Card, myRank int, myChips int, myCommitted int, current
 				}
 			}
 		} else {
-			ourHandRocks := true
-			// if len(communityCards) == 5 {
-			//     riverScore := poker.Evaluate(communityCards)
-			// 	bestScore := poker.Evaluate(append(communityCards, myCards[0], myCards[1]))
-			// 	logger.Println("Community score = " + strconv.Itoa(int(riverScore)) + " Best score = " + strconv.Itoa(int(bestScore)))
-			// 	if bestScore >= riverScore - 15 {
-			// 		ourHandRocks = false
-			// 	}
-			// 	if bestScore == riverScore {
-			// 		ourHandRocks = true
-			// 	}
-			// }
-			// if float32(currentBet) < float32(myTotal) * .30 {
-			// 	willing := int(math.Round(float64(myTotal) * rankPct))
-			// 	if willing >= currentBet {
-			// 		myBet = currentBet
-			// 	}
-			// }
-			if ourHandRocks {
-				switch rankPct := rankPct; {
-					case rankPct > .7:
-						// ALL IN
-						myBet = myTotal
-					case rankPct > .45:
-						//Bid aggressively
-						myBet = int(math.Round(float64(myTotal) * rankPct))
-					case rankPct > .18:
-						//Bid conservatively
-						willing := int(math.Round(float64(myTotal) * rankPct))
-						if willing >= currentBet {
-							myBet = currentBet
-						}
+			if river {
+			    riverScore := poker.Evaluate(communityCards)
+				logger.Println("Community score = " + strconv.Itoa(int(riverScore)) + " Best score = " + strconv.Itoa(myRank))
+				if myRank + 500 < int(riverScore) {
+					ourHandRocks = true
 				}
 			}
+			if turn {
+			    turnScore1 := poker.Evaluate(append(communityCards, myCards[0]))
+			    turnScore2 := poker.Evaluate(append(communityCards, myCards[1]))
+				logger.Println("Turn score1 = " + strconv.Itoa(int(turnScore1)) + " Turn score2 = " + strconv.Itoa(int(turnScore2)))
+				diff := int32(0)
+				if turnScore1 > turnScore2 {
+					diff = turnScore1 - turnScore2
+				} else {
+					diff = turnScore2 - turnScore1
+				}
+				if diff > 500 {
+					ourHandRocks = true
+				}
+			}
+			logger.Println(ourHandRocks)
+			switch rankPct := rankPct; {
+				case rankPct > .7:
+					// ALL IN
+					myBet = myTotal
+				case rankPct > .4 && flop:
+					//Bid aggressively FLOP
+					myBet = int(math.Round(float64(myTotal) * rankPct))
+				case rankPct > .45 && turn:
+					//Bid aggressively TURN
+					myBet = int(math.Round(float64(myTotal) * rankPct))
+				case rankPct > .5 && river:
+					//Bid aggressively RIVER
+					myBet = int(math.Round(float64(myTotal) * rankPct))
+				// case rankPct > .14 && flop:
+				// 	//Bid conservatively FLOP
+				// 	willing := int(math.Round(float64(myTotal) * rankPct))
+				// 	if willing >= currentBet {
+				// 		myBet = currentBet
+				// 	}
+				// case rankPct > .18 && turn:
+				// 	//Bid conservatively TURN
+				// 	willing := int(math.Round(float64(myTotal) * rankPct))
+				// 	if willing >= currentBet {
+				// 		myBet = currentBet
+				// 	}
+				// case rankPct > .22 && river:
+				// 	//Bid conservatively RIVER
+				default:
+					willing := int(math.Round(float64(myTotal) * rankPct))
+					if willing >= currentBet {
+						myBet = currentBet
+					}
+			}
 		}
-
+		if ourHandRocks {
+			myBet = int(math.Round(float64(myBet) * 1.5))
+		}
 		logger.Println("Willing to bet: " + strconv.Itoa(myBet))
 		// if current bet is greater than what we're willing to bet
 		if (myBet < currentBet) {
@@ -178,4 +205,26 @@ func Bet(myCards []poker.Card, myRank int, myChips int, myCommitted int, current
 	}
 
 	return myBet
+}
+
+func checkRaise(holeCards []poker.Card) (raiseIt bool) {
+	raiseIt = false
+
+	card1 := holeCards[0].String()
+	card2 := holeCards[1].String()
+	
+	if (card1[0] == card2[0]) {
+		raiseIt = true
+	}
+	if card1[0] == 'A' || card2[0] == 'A' {
+		raiseIt = true
+	}
+
+	if card1[0] == 'K' || card2[0] == 'K' || card1[0] == 'Q' || card2[0] == 'Q'{
+		if card1[1] == card2[1] {
+			raiseIt = true
+		}
+	}
+
+	return raiseIt
 }
