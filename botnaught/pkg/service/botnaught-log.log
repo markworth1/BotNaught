@@ -1,0 +1,731 @@
+Game ID: FoldGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:6186
+My Hand:
+2s, 
+Qh, 
+Kc, 
+9s, 
+Kh, 
+My rank / rank percentage: 6186, 0.171
+Current bet: 2
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 17
+Willing to bet: 2
+Returning action  {call 0}
+Game ID: CallGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2s, 
+Current bet: 2
+Current chips: 100 - Committed chips: 0
+Willing to bet: 2
+Returning action  {call 0}
+Game ID: Raise20Game
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+Td, 
+Current bet: 2
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: AllInGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:1600
+My Hand:
+Ts, 
+Qd, 
+2c, 
+Th, 
+Jh, 
+My rank / rank percentage: 1600, 0.786
+Current bet: 2
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+aggressive flop
+Willing to bet: 79
+Returning action  {raise 79}
+Game ID: Fold35%BidGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:3500
+My Hand:
+Ts, 
+Qd, 
+3s, 
+Ts, 
+Qh, 
+My rank / rank percentage: 3500, 0.531
+Current bet: 36
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+aggressive flop
+Willing to bet: 53
+Returning action  {raise 53}
+Game ID: CallMidGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:4500
+My Hand:
+Ts, 
+Qd, 
+Jd, 
+5s, 
+6c, 
+My rank / rank percentage: 4500, 0.397
+Current bet: 30
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 40
+Willing to bet: 30
+Returning action  {call 0}
+Game ID: RaiseMidGame
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:3000
+My Hand:
+Ts, 
+Qd, 
+Qs, 
+6s, 
+9s, 
+My rank / rank percentage: 3000, 0.598
+Current bet: 20
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+aggressive flop
+Willing to bet: 60
+Returning action  {raise 60}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaisePair
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+2s, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaisePair
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+2s, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: FlopMatchCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+2h, 
+7c, 
+Current bet: 10
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: -1
+Returning action  {fold 0}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: FlopMatchCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+Qh, 
+7c, 
+Current bet: 10
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: -1
+Returning action  {fold 0}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: FlopMatchCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+Qh, 
+7c, 
+Current bet: 5
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: -1
+Returning action  {fold 0}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: FlopMatchCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:3919
+My Hand:
+Qs, 
+2d, 
+Ts, 
+Qh, 
+7c, 
+My rank / rank percentage: 3919, 0.475
+Current bet: 5
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+aggressive flop
+Willing to bet: 47
+Returning action  {raise 47}
+Game ID: CheckPreFlop
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Ts, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: RaiseAce
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+As, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: Suited
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qd, 
+2d, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+Willing to bet: 20
+Returning action  {raise 20}
+Game ID: FlopCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:0
+My Hand:
+Qs, 
+2d, 
+Ts, 
+3h, 
+7c, 
+Current bet: 0
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 0
+Willing to bet: 0
+Returning action  {call 0}
+Game ID: FlopMatchCall
+--------------------------------------
+--------------------------------------
+Previous actions:
+
+Player:Vinnie
+My Rank:6076
+My Hand:
+Qs, 
+2d, 
+Ts, 
+Qh, 
+7c, 
+My rank / rank percentage: 6076, 0.186
+Current bet: 5
+Current chips: 100 - Committed chips: 0
+myHandLead: 0
+default bet. Max: 19
+Willing to bet: 5
+Returning action  {call 0}

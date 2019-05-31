@@ -46,6 +46,10 @@ func (b *basicBotnaughtService) Action(ctx context.Context, curGame game.Game) (
 		logger.Println("--------------------------------------")
 		b.curGameID = curGame.GameID
 	}
+	logger.Println("Previous actions:")
+	for _, handlog := range curGame.HandLog {
+		logger.Println(handlog)
+	}
 	logger.Println("")
 	for _, action := range curGame.AvailableActions {
 		if action == "call" || action == "check" {
@@ -121,7 +125,8 @@ func Bet(myCards []poker.Card, myRank int, myChips int, myCommitted int, current
 		turn := len(communityCards) == 4
 		river := len(communityCards) == 5
 
-		ourHandRocks := false
+
+		myHandLead := int32(0)
 		// No Community Cards have been dealt (PRE-FLOP)
 		if len(communityCards) == 0 {
 			// Raise if we have a Pair, Ace or suited K/Q
@@ -137,65 +142,63 @@ func Bet(myCards []poker.Card, myRank int, myChips int, myCommitted int, current
 			if river {
 			    riverScore := poker.Evaluate(communityCards)
 				logger.Println("Community score = " + strconv.Itoa(int(riverScore)) + " Best score = " + strconv.Itoa(myRank))
-				if myRank + 500 < int(riverScore) {
-					ourHandRocks = true
-				}
+				myHandLead = riverScore - int32(myRank)
+				// if myRank + 500 < int(riverScore) {
+				// 	ourHandRocks = true
+				// }
 			}
 			if turn {
 			    turnScore1 := poker.Evaluate(append(communityCards, myCards[0]))
 			    turnScore2 := poker.Evaluate(append(communityCards, myCards[1]))
 				logger.Println("Turn score1 = " + strconv.Itoa(int(turnScore1)) + " Turn score2 = " + strconv.Itoa(int(turnScore2)))
-				diff := int32(0)
 				if turnScore1 > turnScore2 {
-					diff = turnScore1 - turnScore2
+					myHandLead = turnScore2 - int32(myRank)
 				} else {
-					diff = turnScore2 - turnScore1
-				}
-				if diff > 500 {
-					ourHandRocks = true
+					myHandLead = turnScore1 - int32(myRank)
 				}
 			}
-			logger.Println(ourHandRocks)
+			
+			logger.Println("myHandLead: " + strconv.Itoa(int(myHandLead)))
 			switch rankPct := rankPct; {
-				case rankPct > .7:
+				case rankPct > .7 && myHandLead > 10:
 					// ALL IN
+					logger.Println("all in")
 					myBet = myTotal
 				case rankPct > .4 && flop:
 					//Bid aggressively FLOP
+					logger.Println("aggressive flop")
 					myBet = int(math.Round(float64(myTotal) * rankPct))
-				case rankPct > .45 && turn:
+				case rankPct > .45 && turn && myHandLead > 10:
 					//Bid aggressively TURN
+					logger.Println("aggressive turn")
 					myBet = int(math.Round(float64(myTotal) * rankPct))
-				case rankPct > .5 && river:
+				case rankPct > .5 && river && myHandLead > 10:
 					//Bid aggressively RIVER
+					logger.Println("aggressive river")
 					myBet = int(math.Round(float64(myTotal) * rankPct))
-				// case rankPct > .14 && flop:
-				// 	//Bid conservatively FLOP
-				// 	willing := int(math.Round(float64(myTotal) * rankPct))
-				// 	if willing >= currentBet {
-				// 		myBet = currentBet
-				// 	}
-				// case rankPct > .18 && turn:
-				// 	//Bid conservatively TURN
-				// 	willing := int(math.Round(float64(myTotal) * rankPct))
-				// 	if willing >= currentBet {
-				// 		myBet = currentBet
-				// 	}
-				// case rankPct > .22 && river:
-				// 	//Bid conservatively RIVER
 				default:
 					willing := int(math.Round(float64(myTotal) * rankPct))
+					logger.Println("default bet. Max: " + strconv.Itoa(willing))
 					if willing >= currentBet {
 						myBet = currentBet
 					}
 			}
 		}
-		if ourHandRocks {
-			myBet = int(math.Round(float64(myBet) * 1.5))
-		}
 		logger.Println("Willing to bet: " + strconv.Itoa(myBet))
+		if myHandLead > 500 {
+			myBet = int(math.Round(float64(myBet) * 1.5))
+			logger.Println("Multiplied by 1.5: " + strconv.Itoa(myBet))
+		}
+		// if we try to bet more chips than we have
+		if myBet > myChips {
+			myBet = myChips
+		}
 		// if current bet is greater than what we're willing to bet
-		if (myBet < currentBet) {
+		if (myBet < currentBet && myRank < 5000) {
+			myBet = currentBet
+		}
+		// if current bet is greater than what we're willing to bet
+		if (myBet < currentBet && !(myRank < 5000)) {
 			myBet = -1
 		}
 		// if we are only willing to match current bet
